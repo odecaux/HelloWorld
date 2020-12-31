@@ -38,8 +38,33 @@ jobs:
             cc: "clang", cxx: "clang++"
           }
 
-    steps:
-    - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout Zug
+        uses: actions/checkout@v2
+        with:
+          repository: arximboldi/zug
+          path: Zug
+      
+      - name: Checkout Immer
+        uses: actions/checkout@v2
+        with:
+          repository: arximboldi/immer
+          path: Immer
+      
+      - name: Checkout Lager
+        uses: actions/checkout@v2
+        with:
+          repository: arximboldi/lager
+          path: Lager
+      
+      - name: Checkout Juce
+        uses: actions/checkout@v2
+        with:
+          repository: odecaux/JUCE
+          path: JUCE
+
 
     - name: Download Ninja and CMake
       shell: cmake -P {0}
