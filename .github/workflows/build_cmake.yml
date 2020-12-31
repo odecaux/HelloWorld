@@ -65,7 +65,8 @@ jobs:
           repository: odecaux/JUCE
           path: JUCE
 
-
+	
+    steps:
     - name: Download Ninja and CMake
       shell: cmake -P {0}
       run: |
